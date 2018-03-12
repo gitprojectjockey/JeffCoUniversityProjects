@@ -1,0 +1,26 @@
+﻿Register POST creates identity database
+
+http://localhost:54025/api/account/register
+
+
+content-type: application/json
+
+
+{
+  "Email": "ewnordin@comcast.net",
+  "Password": "Wr400fg!",
+  "ConfirmPassword": "Wr400fg!"
+}
+
+
+Get token by POST to http://localhost:54025/token
+content-type: application/json
+--place credentials in post body
+username=ewnordin@comcast.net&password=Wr400fg!&grant_type=password
+
+http://localhost:54025/Api/JeffCoUniversity/Instructors
+
+Then use the token returned from above call in the header of the get request...
+
+authorization: bearer 75OEK-A3Kmr9D9i8_piPprEXMpZc1p-RM-MDnbBwNcJPa4ovBNlPc0ManMNcEyZNFrwPys2DOG8XztVoWmE1S4Dlq4-DahbCclVEmuffwdYCvEJzvZjngbhhVWMZTej66aMfoYXC3TzLL7fljL-3DfaBqn5q6GgoyXxsz8X38kmdtsrcke1iIuLT1YoBWmNYQlVkDwU9WCKODcQGBYVZgvX7UivvnNZIdgABA-bK_LEEE7lVwrnoYToCEhU91OOrizk1mscDNttSY5KTOARkLegpvZDM5DYc6fr-HS7w0-gLE2oeTYYPKk89ea2TKKDxnlrbchnUw7PmtLSPFVsfSCUUKsOO_LaD-E6SObcLb-3J2bL5cqZAfaj5xQajGAtybdEyoA9SFtgFmqb5B8La5zMMl6Wjk3fn5Uq6mHG-SF8Rz9EgNdwi1MQRZCsF6YvHzZURcwLiiHTI5yOJu9dgmwy9wK9zE89kxpQE8UtZKXU
+content-type: application/json

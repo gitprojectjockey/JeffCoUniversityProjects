@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="utf-8" />
+    <script src="~/Scripts/jquery.validate.js"></script>
+</head>
+<body style="padding-top:20px">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="well">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>
+                                <h4>User Login</h4>
+                            </td>
+                            <td colspan="2">
+                                @Html.ActionLink("Go To Register", "ShowRegistrationPartial", "Home", new { @class = "btn btn-default pull-right" })
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="width:150px">
+                                <h5>Username</h5>
+                            </td>
+                            <td>
+                                <input class="form-control" type="text" name="UserName" id="txtUsername" placeholder="Username" value="val@comcast.net" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>Password</h5>
+                            </td>
+                            <td>
+
+                                <input class="form-control" type="password" id="txtPassword" placeholder="Password" value="Wr400f!" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="button" id="btnLogin" value="Login" class="btn btn-default" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="validationError" class="alert alert-danger collapse">
+                    <a id="linkCollapseValidationError" class="close" href="#">&times;</a>
+                    <div id="errorMessage"></div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

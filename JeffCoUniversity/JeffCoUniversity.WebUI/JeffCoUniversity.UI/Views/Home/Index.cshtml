@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>JeffCo University Administration</h1>
+</div>
+<div>
+    @if (String.IsNullOrEmpty(ViewBag.PartialType))
+    {
+        { Html.RenderPartial("_Login"); }
+    }
+    else
+    {
+        { Html.RenderPartial($"{@ViewBag.PartialType}"); }
+    }
+</div>
